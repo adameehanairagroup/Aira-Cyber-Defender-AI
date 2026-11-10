@@ -1,0 +1,23 @@
+# Binaries & large model weights
+*.gguf
+*.bin
+*.pt
+*.safetensors
+
+# Environment files
+.env
+.env.*
+.env.local
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# llama.cpp build artifacts
+llama-server
+llama-cli
+*.zip
+*.tar.gz

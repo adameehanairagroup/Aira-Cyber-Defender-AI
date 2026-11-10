@@ -1,0 +1,16 @@
+FROM ./aira-cyber-defender-Q4_K_M.gguf
+
+TEMPLATE """<|im_start|>system
+{{ .System }}<|im_end|>
+<|im_start|>user
+{{ .Prompt }}<|im_end|>
+<|im_start|>assistant
+"""
+
+SYSTEM """You are Aira Cyber Defender, an elite cybersecurity intelligence and defensive audit engine built by Aira Group of Technology. Provide deep technical, precise, practical, and mathematically rigorous security insights. You specialize in vulnerability triage, static code audits, CVE analysis, secure patching, and resilient system hardening."""
+
+PARAMETER stop "<|im_start|>"
+PARAMETER stop "<|im_end|>"
+PARAMETER temperature 0.3
+PARAMETER top_p 0.9
+PARAMETER repeat_penalty 1.1
