@@ -1,4 +1,15 @@
-# 🤖 Aira Cyber Defender AI
+<p align="center">
+  <a href="https://airaaigroup.in" target="_blank">
+    <img src="https://airaaigroup.in/assets/logo.png" width="130" alt="Aira Group of Technology" />
+  </a>
+</p>
+
+<h1 align="center">🤖 Aira Cyber Defender AI</h1>
+
+<p align="center">
+  <b>Sovereign Autonomous Cybersecurity Intelligence & Defensive Audit Engine</b><br>
+  <i>Engineered by Er. Adam Eehan for Aira Group of Technology</i>
+</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Hugging%20Face-Model%20Card-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" alt="Hugging Face Model" />
