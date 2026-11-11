@@ -1,4 +1,4 @@
-# 🛡️ Aira Cyber Defender AI
+# 🤖 Aira Cyber Defender AI
 
 <p align="center">
   <img src="https://img.shields.io/badge/Hugging%20Face-Model%20Card-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" alt="Hugging Face Model" />
