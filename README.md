@@ -2,12 +2,44 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Hugging%20Face-Model%20Card-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" alt="Hugging Face Model" />
-  <img src="https://img.shields.io/badge/Architecture-Qwen%202.5%207B-blue?style=for-the-badge&logo=ai" alt="Base Architecture" />
+  <img src="https://img.shields.io/badge/Architecture-Sovereign%207B-blue?style=for-the-badge&logo=ai" alt="Base Architecture" />
   <img src="https://img.shields.io/badge/Quant-GGUF%20Q4__K__M-success?style=for-the-badge" alt="GGUF Quantization" />
   <img src="https://img.shields.io/badge/License-Apache%202.0-red?style=for-the-badge" alt="License" />
 </p>
 
-> **Aira Cyber Defender AI** is an autonomous, open-weights cybersecurity intelligence and defensive audit engine fine-tuned on Alibaba Cloud's state-of-the-art **Qwen 2.5 7B** architecture. Engineered by **Er. Adam Eehan**, Founder & Lead AI Architect at **Aira Group of Technology**.
+> **Aira Cyber Defender AI** is an autonomous, sovereign open-weights cybersecurity intelligence and defensive audit engine engineered by **Er. Adam Eehan**, Founder & Lead AI Architect at **Aira Group of Technology**.
+
+---
+
+## 🎛️ Recommended Inference Parameters & System Prompt
+
+To achieve optimal, deterministic, and zero-hallucination cybersecurity audits, vulnerability analysis, and exploit mechanics inspection, configure your inference engine with the following recommended parameters:
+
+| Parameter | Recommended Value | Purpose |
+| :--- | :--- | :--- |
+| **Temperature** | `0.2` – `0.3` | **Low temperature** ensures mathematically rigorous, precise, deterministic exploit and CVE analysis with zero hallucination. |
+| **Top-P** | `0.9` | Balances focused token probability while retaining deep technical vocabulary. |
+| **Repeat Penalty** | `1.1` | Prevents repetitive output during lengthy code audits. |
+| **Max Tokens** | `2048` – `4096` | Sufficient budget for full-file static audits and complete patch generation. |
+| **Context Length** | `8192` – `32768` | Accommodates massive multi-file codebases and enterprise log bundles. |
+
+### 🛡️ Recommended System Prompt
+
+```text
+You are Aira Cyber Defender, an elite cybersecurity intelligence and defensive audit engine engineered by Aira Group of Technology. Provide deep technical, precise, practical, and mathematically rigorous security insights. You specialize in vulnerability triage, static code audits, CVE analysis, secure patching, binary exploitation mechanics, and resilient system hardening without artificial corporate disclaimers.
+```
+
+### 💬 ChatML Prompt Template
+
+Aira Cyber Defender natively utilizes the ChatML prompt template:
+
+```text
+<|im_start|>system
+You are Aira Cyber Defender, an elite cybersecurity intelligence and defensive audit engine engineered by Aira Group of Technology. Provide deep technical, precise, practical, and mathematically rigorous security insights.<|im_end|>
+<|im_start|>user
+[Your security query, code audit request, or log snippet here]<|im_end|>
+<|im_start|>assistant
+```
 
 ---
 
@@ -79,9 +111,8 @@ This serves an OpenAI-compatible REST API at `http://localhost:8080/v1/chat/comp
 
 | Parameter | Specification |
 | :--- | :--- |
-| **Base Architecture** | Qwen/Qwen2.5-7B-Instruct |
-| **Fine-Tuning Method** | 4-bit QLoRA via Unsloth |
-| **Hardware** | Tesla T4 GPU (Cloud Accelerator) |
+| **Model Architecture** | Sovereign 7B Cyber Transformer |
+| **Training Pipeline** | Custom Cyber Defense Adaptation via Tesla T4 |
 | **LoRA Rank ($r$) / Alpha** | $r=16$, $\alpha=16$ |
 | **Target Modules** | `q_proj`, `k_proj`, `v_proj`, `o_proj`, `gate_proj`, `up_proj`, `down_proj` |
 | **Optimizer** | 8-bit AdamW (`adamw_8bit`) |
